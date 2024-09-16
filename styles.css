@@ -1,0 +1,126 @@
+/*BASIC RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    background-color: var(--cream);
+}
+
+/*VARIABLES*/
+:root {
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --montserratFamily: "Montserrat", sans-serif;
+    --frauncesFamily: "Fraunces", serif;
+
+    --paragraphSize: 1.4rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /*flex-start para no tener todo el ancho de los elementos*/
+    height: 100svh;
+    font-size: var(--paragraphSize);
+    font-family: var(--montserratFamily);
+    color: var(--darkGrayishBlue);
+  }
+
+/*UTILITIES CLASS*/
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.productContainer {
+    margin: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+@media screen and (min-width:721px){
+    .productContainer {
+        display: flex;
+    }
+}
+
+.productContainer__picture {
+    max-width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+    height: 100%;
+}
+
+.productContent {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.productTitles {
+    gap: 0.5rem;
+}
+
+.productTitles__h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.productTitles__h1 {
+    font-family: var(--frauncesFamily);
+    font-size: 3.2rem;
+    color: var(--veryDarkBlue);
+    font-weight: 700;
+}
+
+.productContent__description {
+    font-weight: 500;
+}
+
+.productPrices {
+    gap: 2rem;  
+}
+
+.productPrices__price {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: var(--darkCyan);
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: var(--frauncesFamily);
+}
+
+.productPrices__price--before {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: var(--darkGrayishBlue);
+    font-family: var(--montserratFamily);
+}
+
+.productPrices__button {
+    background-color: var(--darkCyan);
+    border: none;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    font-weight: 700;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+ 
